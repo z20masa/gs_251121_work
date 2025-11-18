@@ -1,0 +1,109 @@
+/* h1.a (タイトル) */
+.a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* p.m1 (今日の1日の運勢は？) */
+.m1 {
+    color: black;
+    font-size: 30px;
+    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ボタンコンテナ */
+.center-container {
+    width:100vw;
+    height:15vh;
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ===============================
+  2. ボタンのスタイル (.b)
+=============================== */
+
+.b {
+    /* **レイアウト/サイズ関連の統合** */
+    display: inline-block;
+    width: 200px;
+    height: 55px;  /* 必要なら line-height と合わせて中央揃えに使う */
+    padding:10px 20px;
+    
+    /* **テキスト/装飾関連の統合** */
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;  /* fontWeight: 500 など、ボタンに見合う重みに変更を検討 */
+    font-size: 30px;
+
+    background-color: #4CAF50;
+    border:none;
+    border-radius: 8px;
+    cursor:pointer;
+
+    /* 💡 box-shadow の値を一つに統合し、スペルミスを修正 */
+
+    border: 2px solid #333;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1),
+    0 8px 0 #3e8e41;       
+}
+
+
+.b:hover {
+    background-color: #5cb85c;
+}
+
+.b:active {
+    transform: translateY(4px);
+    box-shadow:
+    0 2px 4px rgba(0,0,0,0.2),
+    0 4px 0 #3e8e41;
+}
+
+
+/* ===============================
+  3. メイン・フッター要素のスタイル
+=============================== */
+
+/* frame (画像とコンテンツを含むメインエリア) */
+.frame {
+    border: 2px solid none;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* p.m2 (ラッキーアイテムは？) */
+.m2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+/* gl_frame (結果メッセージ表示エリア) */
+.gl_frame {
+    border: 2px solid none;
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* 💡 gl_frame 内のテキストも中央寄せにするため追加すると確実 */
+}
+
+
+#mainImage3 {
+    display: block; /* 💡 画像をブロック要素にして、親要素のtext-align: center;の影響外にするか */
+    margin: 0 auto; /* 💡 この二行で画像自体を中央寄せにする */
+}
