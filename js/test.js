@@ -34,6 +34,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
  $(".m1").css("color","red");
  $("#mainImage1").attr("src", "画像/10.jpeg");
  $("#sound_xx1")[0].play();
+ $("#header").css("background-image", "url('画像/100.jpeg')"); //背景画像
 
 }else if(random===1) {
   console.log("Good !良い1日になるでしょう");  
@@ -41,6 +42,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $(".m1").css("color","red");
   $("#mainImage1").attr("src", "画像/11.jpeg");
   $("#sound_xx2")[0].play();
+  $("#header").css("background-image", "url('画像/110.jpeg')"); //背景画像
   
 }else if(random===2) {
   console.log("So-so 今日はいつも通りの1日です");
@@ -48,6 +50,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $(".m1").css("color","red");
   $("#mainImage1").attr("src", "画像/12.jpeg");
   $("#sound_xx3")[0].play();
+  $("#header").css("background-image", "none"); // 画像をリセット
   
 }else if(random===3) {
   console.log("It is not day. 今日はイマイチ");  
@@ -55,6 +58,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $(".m1").css("color","red");
   $("#mainImage1").attr("src", "画像/13.jpeg");
   $("#sound_xx4")[0].play();
+  $("#header").css("background-image", "none"); // 画像をリセット
   
 }else if(random===4) {
   console.log("Bad Day… 今日は家にいましょう…😢"); 
@@ -62,6 +66,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $(".m1").css("color","red");
   $("#mainImage1").attr("src", "画像/15.jpeg");
   $("#sound_xx5")[0].play();
+  $("#header").css("background-image", "none"); // 画像をリセット
 }  
 
 
@@ -88,34 +93,38 @@ console.log("Great!! 今日は最高の1日でしょう!");
 // 1. ラッキーアイテムと背景色を random の値に応じて設定
     if(random === 1) { // 💡 random = 1 の場合
         console.log("ラッキーアイテムなし (Good!)");
-        $(".gl_frame").empty(); // テキストなし
-        // $("body").css("background-color", "lightblue"); // 背景色
-        
+        $(".gl_frame").empty(); // テキストなし     
+        $("body").css("background-color", "transparent");
+        $(".wrap").css("background-color", "transparent");
         $("#mainImage3").hide().attr("src", ""); // 画像非表示
 
     } else if(random === 2) { // 💡 random = 2 の場合
         console.log("ラッキーアイテムなし (So-so)");
         $(".gl_frame").empty(); // テキストなし
-        // $("body").css("background-color", "lightgreen"); // 背景色
+        $("body").css("background-color", "transparent"); // 背景色をリセット
+        $(".wrap").css("background-color", "transparent");
         $("#mainImage3").hide().attr("src", ""); // 画像非表示
 
     } else if(random === 3) { // 💡 random = 3 の場合
         console.log("ラッキーアイテムなし (It is not day.)");
         $(".gl_frame").empty(); // テキストなし
-        // $("body").css("background-color", "lightyellow"); // 背景色
+        $("body").css("background-color", "transparent"); // 背景色をリセット
+        $(".wrap").css("background-color", "transparent");
         $("#mainImage3").hide().attr("src", ""); // 画像非表示
 
     } else if(random === 4) { // 💡 random = 4 の場合 (既存)
         console.log("そんなあなたのラッキーアイテム");
         $(".gl_frame").html("そんなあなたのラッキーアイテムは、「肉！」今日は朝から肉を食べましょう！！🍖🍖🍖");
         $(".gl_frame").css("color","black");
-        $("body").css("background-color", "darkgray");  // 背景色
+        $(".wrap").css("background-color", "darkgray");  // 背景色
+        $("body").css("background-color", "transparent");
         $("#mainImage3").attr("src", "画像/80.jpeg").show(); // 画像表示
 
     } else { // 💡 random = 0 の場合 (Great!!)
         console.log("MMMMMMM (ラッキーアイテムなし、背景色なし)"); 
         $(".gl_frame").empty();
         $("body").css("background-color", "transparent"); // 背景色を透明に
+        $(".wrap").css("background-color", "transparent");
         $("#mainImage3").attr("src", "").hide();
     };
 
