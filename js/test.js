@@ -34,7 +34,8 @@ console.log("Great!! 今日は最高の1日でしょう!");
  $(".m1").css("color","red");
  $("#mainImage1").attr("src", "画像/10.jpeg");
  $("#sound_xx1")[0].play();
- $("#header").css("background-image", "url('画像/100.jpeg')"); //背景画像
+ $("#header").css("background-image", "none");
+ $(".wrap").css("background-image", "url('画像/画像100.jpeg')"); // 背景画像 (wrap)
 
 }else if(random===1) {
   console.log("Good !良い1日になるでしょう");  
@@ -42,7 +43,8 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $(".m1").css("color","red");
   $("#mainImage1").attr("src", "画像/11.jpeg");
   $("#sound_xx2")[0].play();
-  $("#header").css("background-image", "url('画像/110.jpeg')"); //背景画像
+  $("#header").css("background-image", "none");
+  $(".wrap").css("background-image", "url('画像/画像110.jpeg')"); // 背景画像 (wrap)
   
 }else if(random===2) {
   console.log("So-so 今日はいつも通りの1日です");
@@ -51,6 +53,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $("#mainImage1").attr("src", "画像/12.jpeg");
   $("#sound_xx3")[0].play();
   $("#header").css("background-image", "none"); // 画像をリセット
+  $(".wrap").css("background-image", "none");
   
 }else if(random===3) {
   console.log("It is not day. 今日はイマイチ");  
@@ -59,6 +62,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $("#mainImage1").attr("src", "画像/13.jpeg");
   $("#sound_xx4")[0].play();
   $("#header").css("background-image", "none"); // 画像をリセット
+  $(".wrap").css("background-image", "none");
   
 }else if(random===4) {
   console.log("Bad Day… 今日は家にいましょう…😢"); 
@@ -67,6 +71,7 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $("#mainImage1").attr("src", "画像/15.jpeg");
   $("#sound_xx5")[0].play();
   $("#header").css("background-image", "none"); // 画像をリセット
+  $(".wrap").css("background-image", "none");
 }  
 
 
