@@ -53,7 +53,8 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $("#mainImage1").attr("src", "画像/12.jpeg");
   $("#sound_xx3")[0].play();
   $("#header").css("background-image", "none"); // 画像をリセット
-  $(".wrap").css("background-image", "none");
+  // $(".wrap").css("background-image", "none");
+  $(".wrap").css("background-image", "url('画像/120.jpeg')"); // 背景画像 (wrap)
   
 }else if(random===3) {
   console.log("It is not day. 今日はイマイチ");  
@@ -62,7 +63,8 @@ console.log("Great!! 今日は最高の1日でしょう!");
   $("#mainImage1").attr("src", "画像/13.jpeg");
   $("#sound_xx4")[0].play();
   $("#header").css("background-image", "none"); // 画像をリセット
-  $(".wrap").css("background-image", "none");
+  // $(".wrap").css("background-image", "none");
+  $(".wrap").css("background-image", "url('画像/130.jpeg')"); // 背景画像 (wrap)
   
 }else if(random===4) {
   console.log("Bad Day… 今日は家にいましょう…😢"); 
